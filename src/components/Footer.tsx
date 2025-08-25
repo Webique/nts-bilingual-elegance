@@ -59,7 +59,6 @@ export const Footer: React.FC = () => {
               <p>+966 12 651 5834</p>
               <p>+966 55 519 2424</p>
               <p>info@ntcorp.net</p>
-              <p>www.ntcorp.net</p>
             </div>
           </div>
         </div>
