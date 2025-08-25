@@ -13,7 +13,7 @@ export const PartnersSection: React.FC = () => {
     {
       title: t('partners.education'),
       partners: ['Al-Manarat Schools', 'Al-Rowwad Schools', 'University of Business & Technology'],
-      arabicPartners: ['مدارس المنارات', 'مدارس الرواد', 'جامعة الأعمال والتكنولوجيا']
+      arabicPartners: ['مدارس الرواد', 'مدارس الرواد', 'جامعة الأعمال والتكنولوجيا']
     },
     {
       title: t('partners.hospitality'),
@@ -40,8 +40,8 @@ export const PartnersSection: React.FC = () => {
   return (
     <section className="section-padding">
       <div className="container-wide">
-        <div className="fade-in-up mb-12">
-          <h2 className={`text-h2 text-nt-navy mb-4 ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className="fade-in-up mb-12 text-center">
+          <h2 className="text-h2 text-nt-navy mb-4">
             {t('partners.title')}
           </h2>
         </div>
@@ -53,14 +53,14 @@ export const PartnersSection: React.FC = () => {
               className={`fade-in-up stagger-${(index % 3) + 1}`}
             >
               <div className="border-b border-border pb-6">
-                <div className={`flex flex-col md:flex-row md:items-center gap-4 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
-                  <div className={`md:w-1/4 ${isRTL ? 'text-right' : 'text-left'}`}>
+                <div className={`flex flex-col md:flex-row md:items-center gap-4 text-center md:text-left ${isRTL ? 'md:flex-row-reverse md:text-right' : ''}`}>
+                  <div className="md:w-1/4">
                     <h3 className="font-semibold text-nt-green text-lg">
                       {sector.title}
                     </h3>
                   </div>
                   <div className="md:w-3/4">
-                    <div className={`flex flex-wrap gap-3 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+                    <div className={`flex flex-wrap gap-3 justify-center md:justify-start ${isRTL ? 'md:justify-end' : ''}`}>
                       {(isRTL ? sector.arabicPartners : sector.partners).map((partner, partnerIndex) => (
                         <span
                           key={partnerIndex}

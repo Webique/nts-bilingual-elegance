@@ -25,15 +25,15 @@ export const HeroSection: React.FC = () => {
       </div>
 
       <div className="container-wide relative z-10">
-        <div className={`max-w-4xl ${isRTL ? 'ml-auto text-right' : 'mr-auto text-left'}`}>
+        <div className="max-w-4xl mx-auto text-center">
           <div className="fade-in-up">
             <h1 className="text-hero text-nt-green mb-6">
               {t('hero.title')}
             </h1>
-            <p className="text-lead text-muted-foreground mb-8 max-w-2xl fade-in-up stagger-1">
+            <p className="text-lead text-muted-foreground mb-8 max-w-2xl mx-auto fade-in-up stagger-1">
               {t('hero.tagline')}
             </p>
-            <div className={`flex gap-4 ${isRTL ? 'flex-row-reverse' : ''} fade-in-up stagger-2`}>
+            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up stagger-2 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
               <Button
                 onClick={() => scrollToSection('services')}
                 size="lg"

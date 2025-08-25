@@ -7,7 +7,7 @@ export const MessageVisionSection: React.FC = () => {
   return (
     <section className="section-padding">
       <div className="container-narrow">
-        <div className={`grid md:grid-cols-2 gap-12 ${isRTL ? 'text-right' : 'text-left'}`}>
+        <div className={`grid md:grid-cols-2 gap-12 text-center md:text-left ${isRTL ? 'md:text-right' : ''}`}>
           {/* Message */}
           <div className="fade-in-up">
             <div className="border-l-4 border-nt-green pl-6 rtl:border-l-0 rtl:border-r-4 rtl:pl-0 rtl:pr-6">
