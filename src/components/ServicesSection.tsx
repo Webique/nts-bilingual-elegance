@@ -53,7 +53,12 @@ export const ServicesSection: React.FC = () => {
     title: t(`services.${i + 1}`),
     icon: serviceIcons[i],
     description: t(`services.description.${i + 1}`) || 'Professional service with exceptional quality and reliability.',
-    category: ['Business', 'Technology', 'Consulting', 'Support'][i % 4]
+    category: [
+      t('services.category.business'),
+      t('services.category.technology'), 
+      t('services.category.consulting'), 
+      t('services.category.support')
+    ][i % 4]
   }));
 
   return (
@@ -97,8 +102,8 @@ export const ServicesSection: React.FC = () => {
                   ${isHovered ? 'scale-[1.02]' : 'scale-100'}
                   ${isRTL ? 'border-r-4 border-l-0 hover:border-r-nt-green' : ''}
                 `}>
-                  <div className={`flex flex-col items-center text-center gap-4 sm:gap-6 ${isRTL ? 'sm:flex-row-reverse' : 'sm:flex-row'} sm:items-center sm:text-left`}>
-                    {/* Service Icon */}
+                  <div className={`flex flex-col items-center text-center gap-4 sm:gap-6 ${isRTL ? 'sm:flex-row-reverse' : 'sm:flex-row'} sm:items-center sm:justify-between`}>
+                    {/* Service Icon - Left side */}
                     <div className={`
                       w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br from-nt-green/20 to-nt-navy/20 
                       flex items-center justify-center flex-shrink-0
@@ -108,33 +113,8 @@ export const ServicesSection: React.FC = () => {
                       <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-nt-green" />
                     </div>
 
-                    {/* Service Content */}
-                    <div className="flex-1 min-w-0 text-center sm:text-left">
-                      <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
-                        <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-nt-green transition-colors duration-300">
-                          {service.title}
-                        </h3>
-                        <span className="px-2 py-1 bg-nt-green/10 text-nt-green text-xs font-medium rounded-full">
-                          {service.category}
-                        </span>
-                      </div>
-                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3">
-                        {service.description}
-                      </p>
-                      <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
-                        <span className="flex items-center gap-2">
-                          <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-nt-green flex-shrink-0" />
-                          Expert Team
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-nt-green flex-shrink-0" />
-                          Quality Assured
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Service Number & Arrow */}
-                    <div className={`flex flex-row items-center gap-3 ${isRTL ? 'sm:order-first' : ''}`}>
+                    {/* Service Number & Arrow - Center */}
+                    <div className="flex flex-row items-center gap-3">
                       <div className={`
                         w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-nt-green to-nt-navy 
                         flex items-center justify-center text-white text-xs sm:text-sm font-bold
@@ -148,6 +128,31 @@ export const ServicesSection: React.FC = () => {
                         ${isHovered ? 'scale-110' : 'scale-100'}
                       `}>
                         <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 ${isRTL ? 'rotate-180' : ''}`} />
+                      </div>
+                    </div>
+
+                    {/* Service Content - Right side */}
+                    <div className="flex-1 min-w-0 text-center sm:text-right">
+                      <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2">
+                        <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-nt-green transition-colors duration-300">
+                          {service.title}
+                        </h3>
+                        <span className="px-2 py-1 bg-nt-green/10 text-nt-green text-xs font-medium rounded-full">
+                          {service.category}
+                        </span>
+                      </div>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3">
+                        {service.description}
+                      </p>
+                      <div className="flex flex-col items-center sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground sm:justify-end">
+                        <span className="flex items-center gap-2">
+                          <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-nt-green flex-shrink-0" />
+                          {t('services.expert-team')}
+                        </span>
+                        <span className="flex items-center gap-2">
+                          <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-nt-green flex-shrink-0" />
+                          {t('services.quality-assured')}
+                        </span>
                       </div>
                     </div>
                   </div>

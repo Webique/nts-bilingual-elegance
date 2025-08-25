@@ -4,7 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export const PartnersSection: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
-  const sectors = [
+  // Create separate sector arrays for LTR and RTL to ensure proper ordering
+  const sectorsLTR = [
     {
       title: t('partners.healthcare'),
       partners: ['Saad Medical Hospital', 'Saudi German Hospital', 'Alsalam Hospital'],
@@ -37,6 +38,9 @@ export const PartnersSection: React.FC = () => {
     }
   ];
 
+  // Use the same order for both LTR and RTL, but handle layout differently
+  const sectors = sectorsLTR;
+
   return (
     <section className="section-padding">
       <div className="container-wide">
@@ -53,14 +57,14 @@ export const PartnersSection: React.FC = () => {
               className={`fade-in-up stagger-${(index % 3) + 1}`}
             >
               <div className="border-b border-border pb-6">
-                <div className={`flex flex-col md:flex-row md:items-center gap-4 text-center md:text-left ${isRTL ? 'md:flex-row-reverse md:text-right' : ''}`}>
+                <div className={`flex flex-col md:flex-row md:items-center gap-4 text-center ${isRTL ? 'md:flex-row-reverse md:text-right' : 'md:text-left'}`}>
                   <div className="md:w-1/4">
                     <h3 className="font-semibold text-nt-green text-lg">
                       {sector.title}
                     </h3>
                   </div>
                   <div className="md:w-3/4">
-                    <div className={`flex flex-wrap gap-3 justify-center md:justify-start ${isRTL ? 'md:justify-end' : ''}`}>
+                    <div className={`flex flex-wrap gap-3 justify-center ${isRTL ? 'md:justify-end' : 'md:justify-start'}`}>
                       {(isRTL ? sector.arabicPartners : sector.partners).map((partner, partnerIndex) => (
                         <span
                           key={partnerIndex}
