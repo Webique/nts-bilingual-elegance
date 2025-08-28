@@ -46,7 +46,7 @@ Northern Trust Services provides comprehensive financial and investment advisory
 
 ## Contact
 
-- **Phone**: +966 12 651 5834 / +966 55 519 2424
+- **Phone**: +966 55 466 0012
 - **Email**: info@ntcorp.net
 - **Website**: www.ntcorp.net
 

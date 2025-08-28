@@ -5,7 +5,7 @@ import { AboutSection } from './AboutSection';
 import { MessageVisionSection } from './MessageVisionSection';
 import { ServicesSection } from './ServicesSection';
 import { PartnersSection } from './PartnersSection';
-import { ProjectsSection } from './ProjectsSection';
+
 import { ContactSection } from './ContactSection';
 import { Footer } from './Footer';
 
@@ -44,7 +44,7 @@ export const LandingPage: React.FC = () => {
         <MessageVisionSection />
         <ServicesSection />
         <PartnersSection />
-        <ProjectsSection />
+
         <ContactSection />
       </main>
       <Footer />

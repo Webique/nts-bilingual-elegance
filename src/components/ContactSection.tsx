@@ -33,16 +33,10 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   <button
-                    onClick={() => openWhatsApp('+966126515834')}
+                    onClick={() => openWhatsApp('+966554660012')}
                     className="font-medium text-foreground hover:text-nt-green transition-colors cursor-pointer block"
                   >
-                    +966 12 651 5834
-                  </button>
-                  <button
-                    onClick={() => openWhatsApp('+966555192424')}
-                    className="font-medium text-foreground hover:text-nt-green transition-colors cursor-pointer block"
-                  >
-                    +966 55 519 2424
+                    {isRTL ? '٠٥٥٤٦٦٠٠١٢' : '966 55 466 0012'}
                   </button>
                 </div>
               </div>

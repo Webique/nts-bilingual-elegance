@@ -56,8 +56,7 @@ export const Footer: React.FC = () => {
               {t('nav.contact')}
             </h4>
             <div className="space-y-2 text-sm text-background/80">
-              <p>+966 12 651 5834</p>
-              <p>+966 55 519 2424</p>
+              <p>{isRTL ? '٠٥٥٤٦٦٠٠١٢' : '966 55 466 0012'}</p>
               <p>info@ntcorp.net</p>
             </div>
           </div>
