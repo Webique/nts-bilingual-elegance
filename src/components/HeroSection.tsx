@@ -1,13 +1,28 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, MessageCircle, Mail } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openWhatsApp = () => {
+    const phoneNumber = '+966555192424'; // Using the phone number from contact info
+    const message = 'Hello! I would like to learn more about your services.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const openEmail = () => {
+    const email = 'info@ntcorp.net';
+    const subject = 'Inquiry about Northern Trust Services';
+    const body = 'Hello,\n\nI would like to learn more about your services.\n\nBest regards,';
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoUrl);
   };
 
   return (
@@ -42,12 +57,22 @@ export const HeroSection: React.FC = () => {
                 {t('hero.cta.services')}
               </Button>
               <Button
-                onClick={() => scrollToSection('contact')}
+                onClick={openWhatsApp}
                 variant="outline"
                 size="lg"
-                className="border-nt-navy text-nt-navy hover:bg-nt-navy hover:text-white px-8 py-4 text-base"
+                className="border-nt-navy text-nt-navy hover:bg-nt-navy hover:text-white px-8 py-4 text-base flex items-center gap-2"
               >
-                {t('hero.cta.contact')}
+                <MessageCircle className="w-5 h-5" />
+                {t('hero.cta.whatsapp')}
+              </Button>
+              <Button
+                onClick={openEmail}
+                variant="outline"
+                size="lg"
+                className="border-nt-navy text-nt-navy hover:bg-nt-navy hover:text-white px-8 py-4 text-base flex items-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                {t('hero.cta.email')}
               </Button>
             </div>
           </div>

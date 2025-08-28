@@ -45,15 +45,21 @@ export const ServicesSection: React.FC = () => {
     },
     {
       icon: Shield,
-      title: t('services.category.consulting'),
+      title: t('services.category.consultation'),
       description: t('services.description.3'),
       color: 'from-nt-green to-nt-navy'
+    },
+    {
+      icon: PieChart,
+      title: t('services.category.financial'),
+      description: t('services.description.1'),
+      color: 'from-nt-navy to-nt-green'
     },
     {
       icon: Handshake,
       title: t('services.category.support'),
       description: t('services.description.11'),
-      color: 'from-nt-navy to-nt-green'
+      color: 'from-nt-green to-nt-navy'
     }
   ];
 
@@ -83,14 +89,14 @@ export const ServicesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Services Grid - 4 Main Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        {/* Services Grid - 5 Main Categories */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {serviceCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <div
                 key={index}
-                className={`group fade-in-up stagger-${(index % 4) + 1} cursor-pointer`}
+                className={`group fade-in-up stagger-${(index % 5) + 1} cursor-pointer`}
                 onClick={openWhatsApp}
               >
                 <div className={`

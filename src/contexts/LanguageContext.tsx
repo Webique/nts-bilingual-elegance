@@ -23,6 +23,8 @@ const translations = {
     'hero.title': 'Northern Trust Services',
     'hero.tagline': 'Trust, Transparency, Expertise for Over 40 Years.',
     'hero.cta.services': 'Explore Our Services',
+    'hero.cta.whatsapp': 'WhatsApp Chat',
+    'hero.cta.email': 'Send Email',
     'hero.cta.contact': 'Contact Us',
     
     // About Section
@@ -48,10 +50,11 @@ const translations = {
     'services.support': 'Support',
     'services.category.business': 'Business',
     'services.category.technology': 'Technology',
-    'services.category.consulting': 'Consulting',
+    'services.category.consultation': 'Consultation',
+    'services.category.financial': 'Financial',
     'services.category.support': 'Support',
     'services.1': 'Financial, administrative, strategic, business advisory and arbitration services.',
-    'services.description.1': 'Financial & business advisory with 40+ years expertise.',
+    'services.description.1': 'Financial & business advisory with 45+ years expertise.',
     'services.2': 'Assessment and preparation companies for mergers & acquisitions.',
     'services.description.2': 'M&A evaluation and preparation services.',
     'services.3': 'Corporate restructuring and re-arrangement.',
@@ -116,6 +119,8 @@ const translations = {
     'hero.title': 'شمال الثقة للخدمات',
     'hero.tagline': 'الثقة، الشفافية، الخبرة لأكثر من ٤٠ عامًا.',
     'hero.cta.services': 'اكتشف خدماتنا',
+    'hero.cta.whatsapp': 'الدردشة في واتساب',
+    'hero.cta.email': 'إرسال بريد إلكتروني',
     'hero.cta.contact': 'تواصل معنا',
     
     // About Section
@@ -141,7 +146,8 @@ const translations = {
     'services.support': 'الدعم',
     'services.category.business': 'الأعمال',
     'services.category.technology': 'التكنولوجيا',
-    'services.category.consulting': 'الاستشارات',
+    'services.category.consultation': 'الاستشارات',
+    'services.category.financial': 'المالية',
     'services.category.support': 'الدعم',
     'services.1': 'خدمات استشارية مالية وإدارية وإستراتيجية وتحكيمية.',
     'services.description.1': 'استشارات مالية وأعمال بخبرة 40+ عام.',
