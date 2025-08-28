@@ -36,6 +36,12 @@ export const Header: React.FC = () => {
               {t('nav.services')}
             </button>
             <button
+              onClick={() => scrollToSection('partners')}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-grow"
+            >
+              {t('nav.clients')}
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline-grow"
             >

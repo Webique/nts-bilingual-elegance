@@ -42,7 +42,7 @@ export const PartnersSection: React.FC = () => {
   const sectors = sectorsLTR;
 
   return (
-    <section className="section-padding">
+    <section id="partners" className="section-padding">
       <div className="container-wide">
         <div className="fade-in-up mb-12 text-center">
           <h2 className="text-h2 text-nt-navy mb-4">

@@ -17,6 +17,7 @@ const translations = {
     // Navigation
     'nav.services': 'Services',
     'nav.about': 'About',
+    'nav.clients': 'Clients',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -83,7 +84,7 @@ const translations = {
     'services.description.14': 'Pre-IPO preparation & fund establishment.',
     
     // Partners
-    'partners.title': 'Our Clients',
+    'partners.title': 'Our top clients',
     'partners.healthcare': 'Healthcare',
     'partners.education': 'Education',
     'partners.hospitality': 'Hospitality',
@@ -113,6 +114,7 @@ const translations = {
     // Navigation
     'nav.services': 'الخدمات',
     'nav.about': 'عن الشركة',
+    'nav.clients': 'العملاء',
     'nav.contact': 'اتصل بنا',
     
     // Hero Section
@@ -179,7 +181,7 @@ const translations = {
     'services.description.14': 'الإعداد للطرح العام وإنشاء الصناديق.',
     
     // Partners
-    'partners.title': 'عملاؤنا',
+    'partners.title': 'أفضل عملائنا',
     'partners.healthcare': 'القطاع الصحي',
     'partners.education': 'القطاع التعليمي',
     'partners.hospitality': 'القطاع الفندقي',
