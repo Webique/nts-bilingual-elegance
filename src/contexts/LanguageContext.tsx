@@ -22,7 +22,7 @@ const translations = {
     
     // Hero Section
     'hero.title': 'Northern Trust Services',
-    'hero.tagline': 'Trust, Transparency, Expertise for Over 40 Years.',
+    'hero.tagline': 'Trust, Transparency, Expertise for Over 45 Years.',
     'hero.cta.services': 'Explore Our Services',
     'hero.cta.whatsapp': 'WhatsApp Chat',
     'hero.cta.email': 'Send Email',
@@ -30,7 +30,7 @@ const translations = {
     
     // About Section
     'about.title': 'Company Profile',
-    'about.text': 'A professional office offering consultancies in financial studies, investment, financing, administrative work and technical advisory services, specialized in local, regional and international expertise for more than 40 years with strong wide leadership experience.',
+    'about.text': 'A professional office offering consultancies in financial studies, investment, financing, administrative work and technical advisory services, specialized in local, regional and international expertise for more than 45 years with strong wide leadership experience.',
     
     // Message & Vision
     'message.title': 'Our Message',

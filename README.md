@@ -1,6 +1,6 @@
 # Northern Trust Services - Professional Financial & Investment Advisory
 
-A professional office offering consultancies in financial studies, investment, financing, administrative work and technical advisory services, specialized in local, regional and international expertise for more than 40 years with strong wide leadership experience.
+A professional office offering consultancies in financial studies, investment, financing, administrative work and technical advisory services, specialized in local, regional and international expertise for more than 45 years with strong wide leadership experience.
 
 ## About
 

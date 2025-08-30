@@ -1,28 +1,13 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { ArrowDown, MessageCircle, Mail } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
   const { t, isRTL } = useLanguage();
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const openWhatsApp = () => {
-    const phoneNumber = '+966555192424'; // Using the phone number from contact info
-    const message = 'Hello! I would like to learn more about your services.';
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
-  const openEmail = () => {
-    const email = 'info@ntcorp.net';
-    const subject = 'Inquiry about Northern Trust Services';
-    const body = 'Hello,\n\nI would like to learn more about your services.\n\nBest regards,';
-    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.open(mailtoUrl);
   };
 
   return (
@@ -48,31 +33,13 @@ export const HeroSection: React.FC = () => {
             <p className="text-lead text-muted-foreground mb-8 max-w-2xl mx-auto fade-in-up stagger-1">
               {t('hero.tagline')}
             </p>
-            <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up stagger-2 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
+            <div className="fade-in-up stagger-2">
               <Button
                 onClick={() => scrollToSection('services')}
                 size="lg"
                 className="bg-nt-green hover:bg-nt-green/90 text-white px-8 py-4 text-base"
               >
                 {t('hero.cta.services')}
-              </Button>
-              <Button
-                onClick={openWhatsApp}
-                variant="outline"
-                size="lg"
-                className="border-nt-navy text-nt-navy hover:bg-nt-navy hover:text-white px-8 py-4 text-base flex items-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                {t('hero.cta.whatsapp')}
-              </Button>
-              <Button
-                onClick={openEmail}
-                variant="outline"
-                size="lg"
-                className="border-nt-navy text-nt-navy hover:bg-nt-navy hover:text-white px-8 py-4 text-base flex items-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                {t('hero.cta.email')}
               </Button>
             </div>
           </div>
