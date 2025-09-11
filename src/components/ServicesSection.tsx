@@ -64,8 +64,13 @@ export const ServicesSection: React.FC = () => {
   ];
 
   const openWhatsApp = () => {
-    const whatsappUrl = `https://wa.me/966554660012`;
+    const whatsappUrl = `https://wa.me/966126515834`;
     window.open(whatsappUrl, '_blank');
+  };
+
+  const openEmail = () => {
+    const emailUrl = 'mailto:info@ntcorp.net';
+    window.open(emailUrl, '_self');
   };
 
   return (
@@ -136,18 +141,22 @@ export const ServicesSection: React.FC = () => {
           })}
         </div>
 
-        {/* Bottom CTA Section */}
+        {/* Contact CTA Buttons */}
         <div className="text-center fade-in-up">
-          <button 
-            onClick={openWhatsApp}
-            className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-nt-green to-nt-navy text-white rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-nt-green/25 transition-all duration-300 cursor-pointer group"
-          >
-            <span>{isRTL ? 'ابدأ مشروعك الآن' : 'Start Your Project Today'}</span>
-            <ArrowRight className={`w-6 h-6 transition-transform duration-300 group-hover:translate-x-2 ${isRTL ? 'rotate-180' : ''}`} />
-          </button>
-          <p className="text-muted-foreground mt-4 text-sm">
-            {isRTL ? 'احصل على استشارة مجانية خلال 24 ساعة' : 'Get free consultation within 24 hours'}
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <button 
+              onClick={openWhatsApp}
+              className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-nt-green to-nt-navy text-white rounded-full font-semibold text-base sm:text-lg hover:shadow-xl hover:shadow-nt-green/25 transition-all duration-300"
+            >
+              <span>{isRTL ? 'تواصل عبر واتساب' : 'Contact via WhatsApp'}</span>
+            </button>
+            <button 
+              onClick={openEmail}
+              className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 border border-nt-navy text-nt-navy rounded-full font-semibold text-base sm:text-lg hover:bg-nt-navy hover:text-white transition-all duration-300"
+            >
+              <span>{isRTL ? 'تواصل عبر البريد' : 'Contact via Email'}</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
