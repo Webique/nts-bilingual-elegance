@@ -108,7 +108,7 @@ const translations = {
     'contact.info': '+966 12 651 5834 / +966 55 519 2424 · info@ntcorp.net · www.ntcorp.net',
     
     // Footer
-    'footer.rights': '© 2024 Northern Trust Services. All rights reserved.',
+    'footer.rights': '© 2025 Northern Trust Services. All rights reserved.',
   },
   ar: {
     // Navigation
@@ -205,7 +205,7 @@ const translations = {
     'contact.info': '‎+966 12 651 5834 / ‎+966 55 519 2424 · info@ntcorp.net · www.ntcorp.net',
     
     // Footer
-    'footer.rights': '© ٢٠٢٤ شمال الثقة للخدمات. جميع الحقوق محفوظة.',
+    'footer.rights': '© ٢٠٢٥ شمال الثقة للخدمات. جميع الحقوق محفوظة.',
   }
 };
 
